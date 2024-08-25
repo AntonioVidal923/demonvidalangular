@@ -1,0 +1,34 @@
+<div>
+  <input #searchInput placeholder="Buscar..." />
+  <button (click)="onSearch()">Buscar</button>
+</div>
+
+<div *ngIf="results.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Type Search</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of paginatedResults">
+        <td>{{ result.id }}</td>
+        <td>{{ result.name }}</td>
+        <td>{{ result.date }}</td>
+        <td>{{ result.description }}</td>
+        <td>{{ result.typeSearch }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+    <span>Página {{ currentPage }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= results.length">Siguiente</button>
+  </div>
+</div>
+<router-outlet />

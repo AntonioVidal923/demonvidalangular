@@ -1,0 +1,63 @@
+/* Asegúrate de que la tabla tenga un diseño básico */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Botón para cargar más */
+  button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para mejorar la visibilidad de la tabla */
+  table {
+    margin: 20px 0;
+  }
+  
+
+  input {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+  }
